@@ -1,0 +1,379 @@
+@import "_font"
+@import "_animation"
+@import "_general"
+@import "_header"
+
+main
+    overflow: hidden
+// Banner CSS
+.banner--block
+    padding: 50px 0 100px
+    overflow: hidden
+    position: relative
+.banner__inner
+    padding: 50px 0
+.banner__content
+    position: relative
+    h2
+        font-weight: 800
+        font-size: 30px
+        line-height: 1.4
+        margin: 0 0 30px
+    p
+        font-size: 16px
+        margin: 0
+        width: 80%
+    .banner__img
+        position: relative
+        margin-top: 40px
+        .unicef__img
+            margin-left: 100px
+
+.login__main
+    background-color: #FFFFFF
+    position: relative
+    border-radius: 10px
+    z-index: 9
+    padding: 25px 25px 40px
+    .login__main
+        p
+            a
+                font-weight: 600
+                text-decoration: underline
+                color: $primary_color
+    .login__header
+        border-bottom: 1px solid #E9EFF6
+        padding-bottom: 10px
+        margin-bottom: 30px
+        img
+            width: 67px
+        h3
+            color: $primary_color
+            font-weight: normal
+            font-size: 18px
+            line-height: 1.4
+            margin: 0 0 0 20px
+
+.accordion
+    ul
+        margin: 0 0 30px
+        li
+            .accordion-link
+                background-color: $blue_bg
+                border: none
+                color: #ffffff
+                font-size: 14px
+                padding: 7px 40px
+                transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+                &.collapsed
+                    background-color: #E9EFF6
+                    color: $primary_color
+                    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+            &:first-child
+                .accordion-link
+                    border-radius: 20px 0 0 20px
+            &:last-child
+                .accordion-link
+                    border-radius: 0 20px 20px 0
+
+.shape
+    svg
+        width: auto
+.shape-1
+    top: -70px
+    left: -100px
+.shape-2
+    bottom: -15px
+    left: 45px
+.shape-3
+    bottom: -110px
+    left: 285px
+.shape-4
+    top: 100px
+    right: 0
+.banner__inner
+    .shape-4
+        top: 0
+    .shape-1
+        left: 0
+        top: -70px
+    .shape
+        width: 60px
+.shape-5
+    bottom: -80px
+    left: -50px
+.shape-6
+    right: -200px
+    bottom: -150px
+.shape-8
+    right: -110px
+    top: -105px
+.shape-9
+    top: 250px
+    left: -50px
+.shape-10
+    width: 180px
+    bottom: 250px
+    right: 50px
+.shape-11
+    bottom: 100px
+    right: 50px
+
+// About Section CSS Start
+.about__content
+    .main__title
+        margin: 0 0 50px
+.about__banner
+    z-index: 9
+    position: relative
+    img
+        border-radius: 20px
+.about__shape
+    top: 100px
+    right: -60px
+    width: 400px
+    height: 400px
+    z-index: -9
+// About Section CSS End
+
+// Express CSS Start
+.express--block
+    padding: 100px 0
+.express__data
+    p
+        font-size: 14px
+        line-height: 1.4
+        margin-bottom: 30px
+    .form-group
+        .form-control 
+            background-color: #FFFFFF
+            border-radius: 5px
+            padding: 14px 20px
+        p
+            margin-top: 10px
+    .btn
+        padding: 15px 50px
+        &:before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            border-radius: 10px 
+            padding: 1px 
+            background: linear-gradient(89.97deg, #76C9EFed  -4.13%, #5A57FF 96.05%) 
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
+            -webkit-mask-composite: destination-out 
+            mask-composite: exclude 
+// Express CSS End
+// Clients CSS Start
+.clients--block
+    padding: 50px 0
+    .client__list
+        margin: 0 -50px
+        .client__logo
+            margin: 0 50px
+            a
+                height: 70px
+                line-height: 70px
+                position: relative
+                display: flex
+                align-items: center
+                justify-content: center
+// Clients CSS End
+
+// Projects CSS Start
+.project__item
+    margin-bottom: 30px
+    .project__img 
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    .project__des
+        margin-top: 10px
+        h3
+            font-size: 18px
+            margin: 0
+        p
+            font-size: 14px
+            margin: 0 
+// Projects CSS End
+
+//  Events CSS Start
+
+//  Events CSS End
+.event_item
+    margin-bottom: 30px
+.event_date
+    width: 130x
+    height: 130px
+    border: solid 2px $blue_bg
+    margin-bottom: 18px
+    .event_day
+        color: $blue_bg
+        font-size: 48px
+        font-weight: 700
+        margin-bottom: 1px
+        line-height: 1
+    .event_month
+        color: $blue_bg
+        font-size: 16px
+        font-weight: 700
+.event_name
+    a
+        font-size: 22px
+        font-weight: 500
+        color: $primary_color
+.event_location 
+    font-size: 14px
+    font-weight: 500
+    margin-top: 2px
+.event_content
+    p
+        font-weight: 500
+        color: #a5a5a5
+        margin-top: 10px
+        font-size: 14px
+        margin-bottom: 13px
+// Footer CSS Start
+.footer__main
+    border-top: 10px solid $primary_color
+    padding: 20px 0
+    .copyright
+        img
+            margin-right: 10px
+.footer__logo
+    img
+        width: 65px
+.footer__links
+    ul
+        li
+            a
+                font-weight: 900
+                color: $primary_color
+                line-height: 1.4
+// Footer CSS End
+
+// Responsive
+@media (max-width: 1199px)
+    .shape-5
+        bottom: 0
+    .banner__content
+        h2
+            font-size: 26px
+    .banner__content
+        .banner__img
+            .unicef__img
+                margin-left: 50px
+    .login__main
+        .login__header
+            h3
+                font-size: 16px
+    .accordion
+        ul
+            li
+                .accordion-link
+                    padding: 5px 20px
+    .footer__links
+        ul
+            li
+                &:not(:last-child)
+                    margin-right: 50px
+@media (max-width: 991px)
+    .about__shape
+        top: 210px
+        right: 150px
+    .banner__content
+        margin-bottom: 150px
+    .banner__inner .banner__content
+        margin-bottom: 0
+    .about--block
+        .col-lg-4
+            order: 0
+        .col-lg-8
+            order: 1
+    .about__banner
+        margin-bottom: 150px
+    .footer__links
+        ul
+            justify-content: center
+            text-align: center
+            li
+                width: 25%
+            .footer__logo
+                width: 100%
+                margin-bottom: 10px
+    .project__item
+        .project__des
+            h3
+                font-size: 16px
+    .copyright
+        justify-content: center !important
+        text-align: center
+        font-size: 12px
+@media (max-width: 767px)
+    .main__title
+        font-size: 24px
+    .banner--block
+        padding: 50px 0
+    .accordion
+        ul
+            li
+                .accordion-link
+                    padding: 10px 30px
+    .login__main
+        .login__header
+            flex-wrap: wrap
+            margin-bottom: 20px
+            justify-content: center
+            h3
+                margin: 15px 0 0 0
+    .about__content
+        .main__title
+            margin: 0 0 30px
+    .express--block
+        padding: 50px 0
+        .express__data
+            h2
+                font-size: 20px
+            .btn
+                padding: 8px 20px
+                font-size: 12px
+    .footer__links
+        ul
+            li
+                width: 50%
+                &:not(:last-child)
+                    margin-right: 0
+@media (max-width: 480px)
+    .shape-1
+        top: -100px
+        left: -50px
+        width: 120px
+    .shape-8
+        right: -80px
+        top: -105px
+        width: 150px
+    .shape-9
+        width: 100px
+    .shape-10
+        bottom: 250px
+        right: 0
+        width: 100px
+    .shape-11
+        bottom: 100px
+        right: 30px
+        width: 150px
+    .about__shape
+        top: 150px
+        right: 0
+        width: 300px
+        height: 300px
+    .banner__content
+        h2
+            font-size: 22px
+            margin-bottom: 15px
+        p
+            width: 100%

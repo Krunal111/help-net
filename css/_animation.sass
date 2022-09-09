@@ -1,0 +1,59 @@
+.moving-animation-1
+    svg
+        path
+            &:nth-child(odd)
+                animation: simple-move-1 2s 2s linear infinite alternate
+            &:nth-child(even)
+                animation: simple-move-1 3s 3s linear infinite alternate
+@keyframes simple-move-1
+    100%
+        transform: translate(0, 10px)
+
+.moving-animation-2
+    svg
+        animation: simple-move-2 2s 2s linear infinite alternate
+@keyframes simple-move-2
+    100%
+        transform: translate(20px, 0)
+
+.rotation-animation-1
+    svg
+        animation: rotation 20s infinite linear
+
+@keyframes rotation
+    from
+        transform: rotate(0deg)
+    to
+        transform: rotate(359deg)
+
+.rotation-animation-2
+    svg
+        animation: rotation-2 6s linear infinite alternate
+
+@keyframes rotation-2
+    from
+        transform: rotate(0deg)
+    to
+        transform: rotate(90deg)
+
+.move-top-animation
+    svg
+        animation: top-animation 1s infinite  alternate
+@keyframes top-animation
+    0%
+        transform: translateY(0)
+    100%
+        transform: translateY(-20px)
+
+.beat-animation
+    svg
+        animation: beat 0.9s infinite alternate
+        transform-origin: center
+@keyframes beat
+	to
+        transform: scale(1.2)
+.moving__bg
+    animation: moving__bg 4s linear infinite alternate
+@keyframes moving__bg
+	100%
+        background-position: 10px 0

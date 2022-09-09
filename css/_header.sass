@@ -1,0 +1,160 @@
+.header__main
+    padding: 20px 0
+    position: relative
+    background-color: $gray_bg
+    .header__logo
+        max-width: 10%
+        flex: 0 0 10%
+        img
+            width: 65px
+    .header__menu
+        max-width: 75%
+        flex: 0 0 75%
+    .header__button
+        max-width: 15%
+        flex: 0 0 15%
+    &.fixed__header
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 99
+        animation: smoothScroll 1s forwards
+@keyframes smoothScroll
+    0% 
+        transform: translateY(-40px)
+    100%
+        transform: translateY(0px)
+.header__menu
+    ul  
+        li
+            &:not(:last-child)
+            padding-right: 30px
+            a
+                color: $primary_color
+                text-decoration: none
+                font-weight: 900
+                font-size: 16px
+.mobile__menu
+    position: absolute
+    top: 30px
+    right: 20px
+    width: 30px
+    height: 20px
+    display: none
+    .line
+        position: absolute
+        left: 0
+        height: 1px
+        width: 100%
+        background: #5A57FF
+        -webkit-text-fill-color: transparent
+        border-radius: 12px
+        transform: perspective(10px)
+    .line__top
+        top: 0
+    .line__middle
+        top: 7px
+    .line__bottom
+        top: 14px
+    &.open
+        .line__top
+            transform-origin: left top
+            transform: rotate(45deg)
+            top: -5px
+            animation: fade_in_out .6s ease
+        .line__middle
+            display: none
+        .line__bottom
+            transform-origin: bottom left
+            transform: rotate(-45deg)
+    &:hover
+        .line__top
+            animation: fade_in_out .6s ease
+        .line__middle
+            animation: fade_in_out .6s ease
+        .line__bottom
+            animation: fade_in_out .6s .3s ease
+@keyframes fade_in_out 
+    0%,
+    100% 
+        width: 100%
+    50%
+        width: 0
+@media (max-width: 1199px)
+    .header__menu
+        ul
+            li
+                padding-right: 15px
+                a
+                    font-size: 14px
+    .header__main
+        .header__logo
+            max-width: 20%
+            flex: 0 0 20%
+@media (max-width: 991px)
+    .header__main
+        padding: 10px 0
+    .mobile__menu
+        display: block
+        z-index: 999
+        &.open
+            .line
+                background: #ffffff
+    .header__main
+        .header__menu
+            opacity: 0
+            position: fixed
+            top: 0
+            right: -250px
+            width: 300px
+            height: 100vh
+            padding-top: 100px
+            overflow: auto
+            padding: 30px
+            background-color: #5a57ff
+            z-index: 99
+            transition: all 1s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+            ul
+                li
+                    background: url(../img/shape-1.svg) left top / contain no-repeat
+                    padding: 0 0 20px
+                    a
+                        color: #ffffff
+            &.open
+                opacity: 1
+                right: 0
+                transition: all 1s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+            nav
+                padding: 0
+                margin-top: 50px
+    .header__button
+        position: absolute
+        top: 20px
+        right: 70px
+        bottom: auto
+        left: auto
+        z-index: 99
+        .btn
+            font-size: 0
+            padding: 0
+            width: 35px
+            height: 35px
+            border-radius: 50%
+            &:before
+                content: "" !important
+                position: absolute
+                top: 7px
+                left: 8px
+                width: 17px
+                height: 17px
+                z-index: 9
+                opacity: 1
+                border-radius: 0
+                background: url(../img/user.svg)
+                background-position: center
+                background-repeat: no-repeat
+                background-size: contain
+        .effect--btn
+            &:after
+                content: none
